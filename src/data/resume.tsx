@@ -4,11 +4,10 @@ import { HomeIcon, NotebookIcon } from "lucide-react";
 export const DATA = {
   name: "Chirag Sonar",
   initials: "CS",
-  url: "https://dillion.io",
+  url: "https://chiragsonar.vercel.app/",
   location: "India, IN",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  locationLink: "https://www.google.com/maps/place/india",
   description: "Combining technical expertise and design thinking, I build seamless, user-focused solutions and contribute to team success as a Frontend Developer",
-  // "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
   summary:
     "Frontend Developer with 1+ year of experience in building high-performance, scalable web applications using React.js, Next.js, and TypeScript. Skilled in crafting intuitive UI/UX experiences, optimizing component performance, and implementing state management with Redux and Zustand.",
   avatarUrl: "/me.jpeg",
