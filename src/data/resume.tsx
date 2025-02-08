@@ -48,21 +48,18 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/chirag1718",
         icon: Icons.github,
-
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/chiragsonar/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
       X: {
         name: "X",
         url: "https://x.com/ChiragdotDev",
         icon: Icons.x,
-
         navbar: true,
       },
       Youtube: {
@@ -75,7 +72,6 @@ export const DATA = {
         name: "Send Email",
         url: "mailto:chirag.work.dev@gmail.com?subject=Excited%20to%20Connect%20via%20Your%20Portfolio!&body=Hi%20Chirag,%0A%0AI%20came%20across%20your%20portfolio%20website%20and%20wanted%20to%20reach%20out.%20Your%20work%20is%20impressive%20and%20I%27d%20love%20to%20connect!%0A%0ARegards,%0A[Your%20Name]",
         icon: Icons.email,
-
         navbar: true,
       },
     },

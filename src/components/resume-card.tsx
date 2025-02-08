@@ -101,9 +101,9 @@ export const ResumeCard = ({
               className="mt-2 text-xs sm:text-sm"
             >
               <ul className="list-disc marker:text-muted-foreground">
-                {description.map((point) => {
+                {description.map((point, index) => {
                   return (
-                    <li className="text-muted-foreground">{point}</li>
+                    <li key={`resume-point-${index}`} className="text-muted-foreground">{point}</li>
                   )
                 })}
               </ul>
