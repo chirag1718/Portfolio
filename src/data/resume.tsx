@@ -9,7 +9,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/india",
   description: "Combining technical expertise and design thinking, I build seamless, user-focused solutions and contribute to team success as a Frontend Developer",
   summary:
-    "Frontend Developer with 1+ year of experience in building high-performance, scalable web applications using React.js, Next.js, and TypeScript. Skilled in crafting intuitive UI/UX experiences, optimizing component performance, and implementing state management with Redux and Zustand.",
+    "Frontend Developer with 2+ year of experience in building high-performance, scalable web applications using React.js, Next.js, and TypeScript. Skilled in crafting intuitive UI/UX experiences, optimizing component performance, and implementing state management with Redux and Zustand.",
   avatarUrl: "/me.jpeg",
   skills: [
     "JavaScript",
