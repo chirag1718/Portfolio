@@ -1,11 +1,32 @@
+import BlurFadeText from '@/components/magicui/blur-fade-text'
 import React from 'react'
+
+const BLUR_FADE_DELAY = 0.04;
 
 const page = () => {
      return (
-          <div className="flex flex-col">
-               <h1 className="text-3xl font-bold">Hey👋🏻 This page is under construction.</h1>
-               <p className="text-xl my-3 text-muted-foreground">Here I'll share my useful Resource.</p>
-               <p className="text-muted-foreground">Check back soon for updates!</p>
+          <div className="flex flex-col space-y-2">
+               <BlurFadeText
+                    delay={BLUR_FADE_DELAY}
+                    className="text-xl font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
+                    yOffset={8}
+                    text='Hey 👋🏻 Welcome to Resources ✨'
+               />
+               <BlurFadeText
+                    className="max-w-[600px] text-lg md:text-xl"
+                    delay={BLUR_FADE_DELAY * 2}
+                    text='This page is under construction.'
+               />
+               <BlurFadeText
+                    className="max-w-[600px] text-sm md:text-base text-muted-foreground"
+                    delay={BLUR_FADE_DELAY * 3}
+                    text='Here I&apos;ll share useful resources'
+               />
+               <BlurFadeText
+                    className="max-w-[600px] text-xs md:text-sm text-muted-foreground underline"
+                    delay={BLUR_FADE_DELAY * 4}
+                    text='Check back soon for updates!'
+               />
           </div>
      )
 }

@@ -20,7 +20,7 @@ const page = () => {
                <BlurFadeText
                     className="max-w-[600px] text-sm md:text-base text-muted-foreground"
                     delay={BLUR_FADE_DELAY * 3}
-                    text='Here I’ll share my custom components.'
+                    text='Here I&apos;ll share my custom components.'
                />
                <BlurFadeText
                     className="max-w-[600px] text-xs md:text-sm text-muted-foreground underline"
