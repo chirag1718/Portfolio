@@ -1,6 +1,7 @@
+'use client'
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
@@ -9,9 +10,47 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import { File, FileText } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isDownloading, setIsDownloading] = useState(false);
+
+  const handleDownload = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    setIsDownloading(true);
+
+    try {
+      // Replace with the actual path to your resume PDF file
+      const response = await fetch('/chirag-sonar-resume.pdf');
+      const blob = await response.blob();
+
+      // Create a URL for the blob
+      const url = window.URL.createObjectURL(blob);
+
+      // Create a temporary anchor element
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+
+      // Set the file name
+      a.download = '/chirag-sonar-resume.pdf';
+
+      // Append to the document and click
+      document.body.appendChild(a);
+      a.click();
+
+      // Clean up
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error('Download failed:', error);
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
       <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
@@ -37,6 +76,27 @@ export default function Navbar() {
           </DockIcon>
         ))}
         <Separator orientation="vertical" className="h-full" />
+        {/* resume */}
+        <DockIcon >
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant="ghost"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
+                onClick={handleDownload}
+              >
+                <FileText className="size-4" />
+
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Resume</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         {Object.entries(DATA.contact.social)
           .filter(([_, social]) => social.navbar)
           .map(([name, social]) => (

@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon, NotebookIcon, CodeXmlIcon } from "lucide-react";
 
 export const DATA = {
   name: "Chirag Sonar",
@@ -9,7 +9,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/india",
   description: "Combining technical expertise and design thinking, I build seamless, user-focused solutions and contribute to team success as a Frontend Developer",
   summary:
-    "Frontend Developer with 1+ year of experience in building high-performance, scalable web applications using React.js, Next.js, and TypeScript. Skilled in crafting intuitive UI/UX experiences, optimizing component performance, and implementing state management with Redux and Zustand.",
+  "Frontend Developer with over 2 years of experience building scalable web applications using React.js, Next.js, and TypeScript. Proficient in web development trifecta, with expertise in modern frameworks and libraries. Skilled in creating responsive, mobile-first designs, optimizing web applications for speed and performance, and collaborating with cross-functional teams to deliver end-to-end solutions. Seeking to leverage my expertise in a dynamic role to deliver user centric, high-performance web solutions.",
   avatarUrl: "/me.jpeg",
   skills: [
     "JavaScript",
@@ -37,7 +37,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/lab", icon: CodeXmlIcon, label: "Lab" },
   ],
   contact: {
     email: "chirag17.dev@gmail.com",
@@ -79,7 +79,7 @@ export const DATA = {
   work: [
     {
       company: "ContractSPAN",
-      href: "",
+      href: "https://contractspan.com/",
       badges: [],
       location: "Remote",
       title: "Frontend Developer",
@@ -87,10 +87,10 @@ export const DATA = {
       start: "June 2023",
       end: "Present",
       description: [
-        "Led frontend development of a Contract Lifecycle Management (CLM) platform, collaborating with CTO and team to ensure smooth feature implementation.",
-        "Designed and built a drag, drop, and resize feature from scratch, improving document editing efficiency.",
-        "Developed a signature customization module allowing users to create, upload, or draw signatures, enhancing contract flexibility.",
-        "Implemented advanced UI/UX enhancements, reducing friction and improving usability for different organization roles.",
+        "Led frontend development of a Contract Lifecycle Management (CLM) and business intelligence platform, building the web app from scratch. Collaborated closely with the CTO and backend developers to ensure seamless feature implementation and frontend integration.",
+        "Developed a custom field placement system for document editing, enabling precise signature mapping to PDF coordinates and enhancing accuracy without external libraries",
+        "Built a dynamic & secure e-signature customization module with tailored modals, offering users three signature methods to attach to documents including typed, uploaded, or hand-drawn directly on the site. This robust feature set provided users with full control over their signatures and initials, enhancing contract flexibility and accuracy.",
+        "Implemented advanced UI/UX enhancements, for a multi-role management system, enabling org admins to onboard users, assign department-level access, and delegate permissions. Streamlined cross-department navigation for admins, enhancing data visibility and operational efficiency",
         "Optimized performance by reducing page load times and implementing efficient state management using Zustand.",
         "Integrated error handling mechanisms, improving application stability and debugging efficiency."
       ],
@@ -113,7 +113,7 @@ export const DATA = {
   education: [
     {
       school: "Shri Vaishnav Vidyapeeth Vishwavidyalaya",
-      href: "https://buildspace.so",
+      href: "#",
       degree: "Bachelor of Science, Computer Science",
       logoUrl: "/college.png",
       start: "2018",

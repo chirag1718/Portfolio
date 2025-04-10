@@ -5,10 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { ChevronRightIcon } from "lucide-react";
+import { ChevronRightIcon, Link2, SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-
 interface ResumeCardProps {
   logoUrl: string;
   altText: string;
@@ -31,17 +30,15 @@ export const ResumeCard = ({
 }: ResumeCardProps) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (description) {
       e.preventDefault();
       setIsExpanded(!isExpanded);
     }
   };
-
   return (
-    <Link
-      href={href || "#"}
-      className="block cursor-pointer"
+    <div
+      className="block"
       onClick={handleClick}
     >
       <Card className="flex">
@@ -75,13 +72,22 @@ export const ResumeCard = ({
                 )}
                 <ChevronRightIcon
                   className={cn(
-                    "size-4 translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100",
+                    "size-4 translate-x-0 transform opacity-100 sm:opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100 ",
                     isExpanded ? "rotate-90" : "rotate-0"
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
-                {period}
+              <div className="flex items-center justify-end gap-1.5">
+                <Link href={href || "#"} onClick={e => e.stopPropagation()}>
+                  <Link2 className={cn(
+                    "size-4 translate-x-0 transform opacity-100 sm:opacity-0 transition-all duration-300 ease-out text-muted-foreground group-hover:-translate-x-1 group-hover:opacity-100 group-hover:-rotate-45 scale-90 group-hover:scale-110 hover:text-blue-500 hover:scale-110",
+                  )} />
+
+                </Link>
+                <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+                  {period}
+                </div>
+
               </div>
             </div>
             {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
@@ -112,6 +118,6 @@ export const ResumeCard = ({
           )}
         </div>
       </Card>
-    </Link>
+    </div>
   );
 };
