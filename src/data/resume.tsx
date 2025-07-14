@@ -87,12 +87,13 @@ export const DATA = {
       start: "June 2023",
       end: "Present",
       description: [
-        "Led frontend development of a Contract Lifecycle Management (CLM) and business intelligence platform, building the web app from scratch. Collaborated closely with the CTO and backend developers to ensure seamless feature implementation and frontend integration.",
-        "Developed a custom field placement system for document editing, enabling precise signature mapping to PDF coordinates and enhancing accuracy without external libraries",
-        "Built a dynamic & secure e-signature customization module with tailored modals, offering users three signature methods to attach to documents including typed, uploaded, or hand-drawn directly on the site. This robust feature set provided users with full control over their signatures and initials, enhancing contract flexibility and accuracy.",
-        "Implemented advanced UI/UX enhancements, for a multi-role management system, enabling org admins to onboard users, assign department-level access, and delegate permissions. Streamlined cross-department navigation for admins, enhancing data visibility and operational efficiency",
-        "Optimized performance by reducing page load times and implementing efficient state management using Zustand.",
-        "Integrated error handling mechanisms, improving application stability and debugging efficiency."
+        "Spearheaded the end-to-end frontend architecture of a Contract Lifecycle Management (CLM) and BI platform, collaborating with the CTO and backend engineers to deliver a scalable, high-performance web application.",
+        "Engineered a proprietary PDF field-mapping system that improved signature placement accuracy and eliminated coordinate-mapping errors, all without thirdparty dependencies.",
+        "Architected an AI-driven contract drafting module, empowering users to generate, converse with, and refine contract language via an integrated rich text editor.",
+        "Developed an intuitive LLM-powered chat interface for PDFs, enabling real-time, conversational insights into document content and boosting user engagement.",
+        "Designed a robust, timestamped audit trail system to track user actions across the contract lifecycle empowering teams with precise, exportable event logs for accountability and compliance.",
+        "Achieved consistent 97+ overall Lighthouse performance scores by implementing strategic code-splitting, lazy loading, and efficient state management with Zustand, resulting in a 55% reduction in page load times and a 45% faster Time to Interactive. Improved Performance score by 64% and Accessibility by 36%.",
+        "Designed a comprehensive e-signature suite with typed, uploaded, and hand-drawn modalities, coupled with multi-role access controls for seamless enterprise governance.",
       ],
     },
     {
