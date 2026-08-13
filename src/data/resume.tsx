@@ -82,9 +82,9 @@ export const DATA = {
       href: "https://contractspan.com/",
       badges: [],
       location: "Remote",
-      title: "Frontend Developer",
+      title: "SDE I",
       logoUrl: "/cspan.svg",
-      start: "June 2023",
+      start: "April 2023",
       end: "Present",
       description: [
         "Spearheaded the end-to-end frontend architecture of a Contract Lifecycle Management (CLM) and BI platform, collaborating with the CTO and backend engineers to deliver a scalable, high-performance web application.",
